@@ -1,0 +1,11 @@
+1. Create a new API Key in Prefect Cloud
+
+Suppose the API Key is "pnu_yVaRO86eSsK7qYl8HyQPYff6eVvR4A05RbSt"
+
+2. Set the key
+setx PREFECT_API_KEY "pnu_yVaRO86eSsK7qYl8HyQPYff6eVvR4A05RbSt"
+
+3. Login 
+prefect cloud login -k pnu_yVaRO86eSsK7qYl8HyQPYff6eVvR4A05RbSt
+
+5. Command to set workspace Id -> prefect cloud workspace set --workspace "shreyas-rao/default" 
