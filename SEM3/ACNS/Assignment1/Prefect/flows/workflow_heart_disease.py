@@ -37,7 +37,7 @@ def main_flow():
 
 # To run 
 if __name__ == "__main__":
-    main_flow.serve(name="heart-disease-workflow",
+    main_flow.serve(name="heart-disease-workflow-2",
                       tags=["heart disease prediction workflow"],
                       parameters={},
                       interval=120) #2 minutes

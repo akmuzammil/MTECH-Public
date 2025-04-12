@@ -11,7 +11,7 @@ from sklearn.preprocessing import MinMaxScaler
 @task
 def load_dataset():
     # Load the dataset -- 918 rows of patient data
-    url = " https://github.com/akmuzammil/MTECH-Public/blob/main/SEM3/ACNS/Datasets/heart.csv"
+    url = "https://raw.githubusercontent.com/akmuzammil/MTECH-Public/refs/heads/main/SEM3/ACNS/Datasets/heart.csv"
     column_names = ['Age','Sex','ChestPainType','RestingBP','Cholesterol','FastingBS','RestingECG','MaxHR','ExerciseAngina','Oldpeak','ST_Slope','HeartDisease']
     return pd.read_csv(url, names=column_names)
 
