@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/8a7b9a8b89f54ce9a355df05c079b004/artifacts
+end_time: 1744568733467
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8a7b9a8b89f54ce9a355df05c079b004
+run_name: sassy-robin-951
+run_uuid: 8a7b9a8b89f54ce9a355df05c079b004
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744568731204
+status: 3
+tags: []
+user_id: a.muzammil

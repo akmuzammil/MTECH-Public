@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/16b91ba9626849b8b7a67b36f973436a/artifacts
+end_time: 1744570592190
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 16b91ba9626849b8b7a67b36f973436a
+run_name: colorful-turtle-993
+run_uuid: 16b91ba9626849b8b7a67b36f973436a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744570589665
+status: 3
+tags: []
+user_id: a.muzammil
