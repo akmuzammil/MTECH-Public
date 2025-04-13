@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/26eabe0a7010400e9941032754f3175e/artifacts
+deleted_time: 1744559039731
+end_time: 1744556434297
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 26eabe0a7010400e9941032754f3175e
+run_name: amusing-fox-740
+run_uuid: 26eabe0a7010400e9941032754f3175e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744556432197
+status: 3
+tags: []
+user_id: a.muzammil

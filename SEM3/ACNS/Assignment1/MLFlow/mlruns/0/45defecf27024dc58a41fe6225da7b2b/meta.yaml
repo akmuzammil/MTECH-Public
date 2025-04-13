@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/45defecf27024dc58a41fe6225da7b2b/artifacts
+deleted_time: 1744559039687
+end_time: 1744556768221
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 45defecf27024dc58a41fe6225da7b2b
+run_name: calm-lynx-94
+run_uuid: 45defecf27024dc58a41fe6225da7b2b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744556766116
+status: 3
+tags: []
+user_id: a.muzammil

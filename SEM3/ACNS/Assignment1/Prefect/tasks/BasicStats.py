@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # Load the dataset
-df = pd.read_csv("../data/heart.csv")
+df = pd.read_csv("../data/heart.csv",header=1)
 logger.info("Dataset loaded successfully.")
 logger.info(f"DataFrame head:\n{df.head()}")
 

@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/6164fb13410a43e8992195badc46d837/artifacts
+deleted_time: 1744559039699
+end_time: 1744556642022
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 6164fb13410a43e8992195badc46d837
+run_name: peaceful-colt-113
+run_uuid: 6164fb13410a43e8992195badc46d837
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744556641988
+status: 3
+tags: []
+user_id: a.muzammil

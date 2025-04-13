@@ -13,31 +13,59 @@ def load_dataset():
     # Load the dataset -- 918 rows of patient data
     url = "https://raw.githubusercontent.com/akmuzammil/MTECH-Public/refs/heads/main/SEM3/ACNS/Datasets/heart.csv"
     column_names = ['Age','Sex','ChestPainType','RestingBP','Cholesterol','FastingBS','RestingECG','MaxHR','ExerciseAngina','Oldpeak','ST_Slope','HeartDisease']
-    return pd.read_csv(url, names=column_names)
+    return pd.read_csv(url, names=column_names,header=1)
 
 # Step 3: Data Preprocessing
 @task(log_prints=True)
 def preprocess_data(df):
+
     # Print columns with missing values and their count
     missing_values = df.isna().sum()
     columns_with_missing = missing_values[missing_values > 0]
     print("Columns with missing values: ")
     print(columns_with_missing)
+    
+    # Fill missing values in numeric columns only
+    numeric_cols = df.select_dtypes(include='number').columns
+    df[numeric_cols] = df[numeric_cols].fillna(df[numeric_cols].median())
 
-    # Replace with Median value
-    df.fillna(df.median(), inplace=True)
-
+    #df.fillna(df.select_dtypes(include='number').median(), inplace=True)
+    #Separate features and target
+    target = df['HeartDisease']
+    features = df.drop(columns=['HeartDisease'])
+    #Encode categorical features
+    features_encoded = pd.get_dummies(features, drop_first=True)
+    #Separate numeric and categorical features
+    original_numeric_cols = df.select_dtypes(include='number').drop(columns=['HeartDisease']).columns
+    
     # Normalize using Min-Max Scaling
     scaler = MinMaxScaler()
-    features = df.drop('HeartDisease', axis=1)  # Exclude the target variable
-    df_normalized = pd.DataFrame(scaler.fit_transform(features), columns=features.columns)
-    df_normalized['HeartDisease'] = df['HeartDisease']  # Add the target variable back to the dataframe
+    # normalized_numeric = pd.DataFrame(
+    #     scaler.fit_transform(numeric_features),
+    #     columns=numeric_features.columns
+    # )
+    features_encoded[original_numeric_cols] = scaler.fit_transform(features_encoded[original_numeric_cols])
+    #Concatenate normalized numeric + original categorical features
+    #df_normalized = pd.concat([normalized_numeric, categorical_features.reset_index(drop=True)], axis=1)
+    df_preprocessed = pd.concat([features_encoded, target.reset_index(drop=True)], axis=1)
+
+    # Add target column back
+    #df_normalized['HeartDisease'] = target.reset_index(drop=True)
+
+    # features = df.drop('HeartDisease', axis=1)  # Exclude the target variable
+    # features = df.select_dtypes(include=['number'])
+    # df_normalized = pd.DataFrame(scaler.fit_transform(features), columns=features.columns)
+    # non_numeric = df.select_dtypes(exclude=['number'])
+    # df_normalized = pd.concat([df_normalized, non_numeric.reset_index(drop=True)], axis=1)
+
+    # df_normalized['HeartDisease'] = df['HeartDisease']  # Add the target variable back to the dataframe
 
     # Print the normalized dataframe
-    print("Normalized DataFrame:")
-    print(df_normalized.head())  # Printing only the first few rows for brevity
+    #Print a sample
+    print("Preprocessed DataFrame (with encoding + normalization):")
+    print(df_preprocessed.head())
 
-    return df_normalized
+    return df_preprocessed
 
 # Step 4: Model Training
 @task
@@ -78,4 +106,4 @@ if __name__ == "__main__":
     workflow_heart_disease.serve(name="heart-disease-workflow",
                       tags=["first workflow"],
                       parameters={},
-                      interval=120) #2 minutes
+                      interval=30) #2 minutes

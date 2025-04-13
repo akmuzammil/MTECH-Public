@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/32d9283a7d454341a853d877807f7d4c/artifacts
+deleted_time: 1744559039683
+end_time: 1744556772381
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 32d9283a7d454341a853d877807f7d4c
+run_name: RandomForest
+run_uuid: 32d9283a7d454341a853d877807f7d4c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744556768251
+status: 3
+tags: []
+user_id: a.muzammil

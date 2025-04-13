@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/97e6d0b634dc4140b6558d96a5abdda8/artifacts
+deleted_time: 1744556373093
+end_time: 1744556315305
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 97e6d0b634dc4140b6558d96a5abdda8
+run_name: gifted-smelt-754
+run_uuid: 97e6d0b634dc4140b6558d96a5abdda8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744556313191
+status: 3
+tags: []
+user_id: a.muzammil

@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/c6308a2e7222441f9cf68e60372de0c9/artifacts
+deleted_time: 1744556373098
+end_time: 1744556024148
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: c6308a2e7222441f9cf68e60372de0c9
+run_name: polite-robin-41
+run_uuid: c6308a2e7222441f9cf68e60372de0c9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744556021977
+status: 3
+tags: []
+user_id: a.muzammil

@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/568871ef845b491fb7c02e8bbe39a676/artifacts
+deleted_time: 1744559039671
+end_time: 1744556773731
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 568871ef845b491fb7c02e8bbe39a676
+run_name: persistent-lamb-140
+run_uuid: 568871ef845b491fb7c02e8bbe39a676
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744556773681
+status: 3
+tags: []
+user_id: a.muzammil

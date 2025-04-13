@@ -29,7 +29,7 @@ def run_task(script_name):
     return 0
 
 @flow
-def main_flow():
+def eda_flow():
     # Run tasks sequentially and capture the results
    data1 = run_task("BasicStats.py")
    data2 = run_task("Binning.py", wait_for=[data1])  
@@ -37,7 +37,7 @@ def main_flow():
 
 # To run 
 if __name__ == "__main__":
-    main_flow.serve(name="heart-disease-workflow-2",
+    eda_flow.serve(name="heart-disease-workflow-2",
                       tags=["heart disease prediction workflow"],
                       parameters={},
-                      interval=120) #2 minutes
+                      interval=30) #2 minutes

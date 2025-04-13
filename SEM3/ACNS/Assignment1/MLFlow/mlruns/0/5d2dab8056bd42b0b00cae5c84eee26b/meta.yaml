@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/5d2dab8056bd42b0b00cae5c84eee26b/artifacts
+deleted_time: 1744556373095
+end_time: 1744556258466
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 5d2dab8056bd42b0b00cae5c84eee26b
+run_name: dapper-duck-400
+run_uuid: 5d2dab8056bd42b0b00cae5c84eee26b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744556256361
+status: 3
+tags: []
+user_id: a.muzammil
