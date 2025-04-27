@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apache Pulsar Real-time Demo</title>
+    <meta name="description" content="A real-time demonstration of Apache Pulsar's producer and consumer capabilities">
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+    {% for file in js_files %}
+    <script type="module" src="{{ file }}"></script>
+    {% endfor %}
+    {% for file in css_files %}
+    <link rel="stylesheet" href="{{ file }}">
+    {% endfor %}
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

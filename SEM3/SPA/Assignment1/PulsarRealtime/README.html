@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Apache Pulsar Real-time Demo</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="apache-pulsar-real-time-demo">Apache Pulsar Real-time Demo</h1>
+<p>This demo application visualizes the real-time messaging capabilities of Apache Pulsar, showcasing producers, topics, and multiple consumer groups with different subscription types.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Interactive message producer that generates random IoT sensor data or custom messages</li>
+<li>Multiple consumer groups demonstrating different subscription types:
+<ul>
+<li>Group 1: Shared subscription - all instances receive a subset of messages</li>
+<li>Group 2: Exclusive subscription - only one consumer receives all messages</li>
+<li>Group 3: Filtered subscription - only receives specific types of messages (temperature &amp; humidity)</li>
+</ul>
+</li>
+<li>Real-time visualization of message flow from producers to consumers</li>
+<li>Statistics dashboard showing message counts and processing latency</li>
+<li>Dark/light mode toggle</li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<p>The application consists of:</p>
+<ol>
+<li>
+<p>A React frontend built with:</p>
+<ul>
+<li>TypeScript</li>
+<li>Tailwind CSS</li>
+<li><a href="http://Socket.IO">Socket.IO</a> for real-time communication</li>
+<li>Chart.js for data visualization</li>
+<li>Lucide React for icons</li>
+</ul>
+</li>
+<li>
+<p>A Python backend built with:</p>
+<ul>
+<li>Flask web framework</li>
+<li>Flask-SocketIO for WebSocket support</li>
+<li>Simulated Pulsar client (can be replaced with a real Apache Pulsar client)</li>
+</ul>
+</li>
+</ol>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Node.js (v16+)</li>
+<li>Python (v3.8+)</li>
+</ul>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>
+<p>Install frontend dependencies:</p>
+<pre><code>npm install
+</code></pre>
+</li>
+<li>
+<p>Install backend dependencies:</p>
+<pre><code>pip install -r requirements.txt
+</code></pre>
+</li>
+</ol>
+<h3 id="running-the-application">Running the Application</h3>
+<ol>
+<li>
+<p>Start the Python backend:</p>
+<pre><code>npm run start-python
+</code></pre>
+<p>This will start the Flask server on <a href="http://localhost:5000">http://localhost:5000</a></p>
+</li>
+<li>
+<p>In a separate terminal, start the React frontend:</p>
+<pre><code>npm run dev
+</code></pre>
+<p>This will start the Vite dev server</p>
+</li>
+<li>
+<p>Open your browser and navigate to the URL shown in the Vite terminal output</p>
+</li>
+</ol>
+<h2 id="integrating-with-a-real-pulsar-cluster">Integrating with a Real Pulsar Cluster</h2>
+<p>To connect this demo to a real Apache Pulsar cluster:</p>
+<ol>
+<li>Update the <code>pulsar_client.py</code> file to use an actual Pulsar client instead of the simulation</li>
+<li>Configure the broker service URL in <code>app.py</code></li>
+<li>Uncomment the actual Pulsar client code in the producer and consumer functions</li>
+</ol>
+<p>Example connection to a real Pulsar cluster:</p>
+<pre><code class="language-python"><span class="hljs-keyword">import</span> pulsar
+
+client = pulsar.Client(<span class="hljs-string">&#x27;pulsar://localhost:6650&#x27;</span>)
+producer = client.create_producer(<span class="hljs-string">&#x27;my-topic&#x27;</span>)
+consumer = client.subscribe(<span class="hljs-string">&#x27;my-topic&#x27;</span>, <span class="hljs-string">&#x27;my-subscription&#x27;</span>)
+</code></pre>
+<h2 id="license">License</h2>
+<p>This project is available under the MIT License.</p>
+
+            
+            
+        </body>
+        </html>
