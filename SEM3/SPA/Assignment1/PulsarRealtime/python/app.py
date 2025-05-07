@@ -15,7 +15,7 @@ app = Flask(__name__,
             static_folder="../dist/assets",
             template_folder="../dist")
 CORS(app)
-socketio = SocketIO(app, cors_allowed_origins="*")
+socketio = SocketIO(app,  async_mode='threading',cors_allowed_origins="*")
 
 # Initialize our Pulsar client wrapper
 pulsar_client = PulsarClientWrapper(broker_service_url="pulsar://localhost:6650")
