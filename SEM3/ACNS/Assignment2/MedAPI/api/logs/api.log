@@ -1,0 +1,1839 @@
+2025-04-30 19:21:00,247 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 19:21:00,308 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.8.178:5000
+2025-04-30 19:21:00,309 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 19:21:00,311 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 19:21:00,569 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 19:21:00,583 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 19:21:00,593 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 19:22:26,364 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:22:26] "GET / HTTP/1.1" 200 -
+2025-04-30 19:22:26,434 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:22:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-30 19:27:36,890 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\models.py', reloading
+2025-04-30 19:27:36,926 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 19:27:45,795 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 19:27:45,809 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 19:27:45,815 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 19:28:44,161 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\models.py', reloading
+2025-04-30 19:28:44,749 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 19:28:49,389 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 19:28:49,396 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 19:28:49,403 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 19:29:04,798 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:29:04] "GET / HTTP/1.1" 200 -
+2025-04-30 19:29:23,146 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\xray.jpg
+2025-04-30 19:29:23,189 - models - INFO - Initialized detection model: medical-detection-model
+2025-04-30 19:30:06,978 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-04-30 19:30:30,870 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-04-30 19:30:30,948 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-04-30 19:30:33,552 - models - INFO - Running detection on image of size (512, 512)
+2025-04-30 19:30:34,541 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 95, in analyze
+    formatted_results = format_results(results, model_type)
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\utils.py", line 79, in format_results
+    'label': item['label'],
+             ~~~~^^^^^^^^^
+KeyError: 'label'
+2025-04-30 19:30:34,562 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:30:34] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 19:32:46,329 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-04-30 19:32:47,067 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 19:32:57,108 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 19:32:57,131 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 19:32:57,144 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 19:33:00,088 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\xray.jpg
+2025-04-30 19:33:00,106 - models - INFO - Initialized detection model: medical-detection-model
+2025-04-30 19:33:01,871 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-04-30 19:33:02,195 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-04-30 19:33:02,271 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-04-30 19:33:04,814 - models - INFO - Running detection on image of size (512, 512)
+2025-04-30 19:33:05,824 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 95, in analyze
+    formatted_results = format_results(results, model_type)
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\utils.py", line 79, in format_results
+    'label': item['label'],
+             ~~~~^^^^^^^^^
+KeyError: 'label'
+2025-04-30 19:33:05,852 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:33:05] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 19:35:58,536 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\xray.jpg
+2025-04-30 19:35:58,541 - models - INFO - Initialized detection model: medical-detection-model
+2025-04-30 19:35:59,040 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-04-30 19:35:59,284 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-04-30 19:35:59,295 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-04-30 19:36:01,507 - models - INFO - Running detection on image of size (512, 512)
+2025-04-30 19:36:02,336 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 95, in analyze
+    formatted_results = format_results(results, model_type)
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\utils.py", line 79, in format_results
+    'label': item['label'],
+             ~~~~^^^^^^^^^
+KeyError: 'label'
+2025-04-30 19:36:02,362 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:36:02] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 19:37:42,506 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-04-30 19:37:43,502 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 19:37:51,617 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 19:37:51,630 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 19:37:51,638 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 19:37:56,075 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\xray.jpg
+2025-04-30 19:37:56,095 - models - INFO - Initialized detection model: medical-detection-model
+2025-04-30 19:37:56,976 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-04-30 19:37:57,516 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-04-30 19:37:57,585 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-04-30 19:38:00,735 - models - INFO - Running detection on image of size (512, 512)
+2025-04-30 19:38:01,700 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 101, in analyze
+    return jsonify({
+        "success": True,
+    ...<2 lines>...
+        "processing_time": f"{processing_time:.2f}s"
+    })
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 215, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 180, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 120, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type Tensor is not JSON serializable
+2025-04-30 19:38:01,723 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:38:01] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 19:40:21,052 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-04-30 19:40:21,772 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 19:40:26,567 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 19:40:26,575 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 19:40:26,583 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 19:41:00,105 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\xray.jpg
+2025-04-30 19:41:00,114 - models - INFO - Initialized detection model: medical-detection-model
+2025-04-30 19:41:01,747 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-04-30 19:41:01,966 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-04-30 19:41:02,021 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-04-30 19:41:04,288 - models - INFO - Running detection on image of size (512, 512)
+2025-04-30 19:41:05,142 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 95, in analyze
+    formatted_results = format_results(results, model_type)
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\utils.py", line 79, in format_results
+    'label': item['label'],
+             ~~~~^^^^^^^^^
+KeyError: 'label'
+2025-04-30 19:41:05,163 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:41:05] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 19:43:01,093 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\utils.py', reloading
+2025-04-30 19:43:01,684 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 19:43:06,277 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 19:43:06,284 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 19:43:06,290 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 19:43:10,173 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\xray.jpg
+2025-04-30 19:43:10,184 - models - INFO - Initialized detection model: medical-detection-model
+2025-04-30 19:43:11,092 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-04-30 19:43:11,313 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-04-30 19:43:11,379 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-04-30 19:43:14,120 - models - INFO - Running detection on image of size (512, 512)
+2025-04-30 19:43:14,994 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:43:14] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 19:43:49,020 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\xray.jpg
+2025-04-30 19:43:49,022 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 19:43:50,650 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-04-30 19:45:34,350 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 19:45:34,662 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 95, in analyze
+    formatted_results = format_results(results, model_type)
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\utils.py", line 90, in format_results
+    'label': item.get('labels', 'Unknown').tolist() if hasattr(item.get('labels'), 'tolist') else item.get('labels', 'Unknown'),
+                                                               ^^^^^^^^
+AttributeError: 'Tensor' object has no attribute 'get'. Did you mean: 'det'?
+2025-04-30 19:45:34,701 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:45:34] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 19:48:02,299 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\utils.py', reloading
+2025-04-30 19:48:02,959 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 19:48:07,836 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 19:48:07,843 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 19:48:07,851 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 19:48:26,209 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\xray.jpg
+2025-04-30 19:48:26,217 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 19:48:29,784 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 19:48:30,099 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 95, in analyze
+    formatted_results = format_results(results, model_type)
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\utils.py", line 98, in format_results
+    elif isinstance(results, torch.Tensor):  # Handle tensor outputs
+                             ^^^^^
+NameError: name 'torch' is not defined
+2025-04-30 19:48:30,135 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:48:30] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 19:49:22,707 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\utils.py', reloading
+2025-04-30 19:49:23,373 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 19:49:27,988 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 19:49:27,994 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 19:49:28,001 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 19:49:35,878 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\xray.jpg
+2025-04-30 19:49:35,886 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 19:49:39,200 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 19:49:39,530 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:49:39] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 19:49:59,292 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\Multiple-microaneurysms.png
+2025-04-30 19:49:59,300 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 19:50:02,822 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 19:50:03,235 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:50:03] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 19:53:37,225 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\models.py', reloading
+2025-04-30 19:53:37,861 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 19:53:44,151 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 19:53:44,161 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 19:53:44,170 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 19:53:47,787 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\Multiple-microaneurysms.png
+2025-04-30 19:53:47,805 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 19:53:51,448 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 19:53:51,901 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 95, in analyze
+    formatted_results = format_results(results, model_type)
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\utils.py", line 106, in format_results
+    raise ValueError("Unsupported results format")
+ValueError: Unsupported results format
+2025-04-30 19:53:51,960 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:53:51] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 19:57:12,230 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\utils.py', reloading
+2025-04-30 19:57:12,982 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 19:57:20,869 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 19:57:20,881 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 19:57:20,889 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 19:57:23,837 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\Multiple-microaneurysms.png
+2025-04-30 19:57:23,869 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 19:57:27,833 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 19:57:28,503 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 95, in analyze
+    formatted_results = format_results(results, model_type)
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\utils.py", line 76, in format_results
+    logger.debug(f"Raw results: {results}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+2025-04-30 19:57:28,615 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:57:28] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 19:57:52,785 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\utils.py', reloading
+2025-04-30 19:57:53,471 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 19:58:46,800 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 19:58:46,821 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.8.178:5000
+2025-04-30 19:58:46,822 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 19:58:46,824 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 19:58:51,065 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 19:58:51,071 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 19:58:51,078 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 19:58:54,145 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\Multiple-microaneurysms.png
+2025-04-30 19:58:54,164 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 19:58:59,191 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 19:58:59,546 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 95, in analyze
+    formatted_results = format_results(results, model_type)
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\utils.py", line 108, in format_results
+    raise ValueError("Unsupported results format")
+ValueError: Unsupported results format
+2025-04-30 19:58:59,577 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 19:58:59] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 19:59:52,460 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\utils.py', reloading
+2025-04-30 19:59:53,102 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 20:00:00,036 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 20:00:00,060 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 20:00:00,074 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 20:08:34,565 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\Multiple-microaneurysms.png
+2025-04-30 20:08:34,594 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 20:08:38,294 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 20:08:39,530 - root - INFO - Raw results: {'label': 'nematode, nematode worm, roundworm', 'confidence': 0.03169548511505127}
+2025-04-30 20:08:39,530 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 95, in analyze
+    formatted_results = format_results(results, model_type)
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\utils.py", line 108, in format_results
+    raise ValueError("Unsupported results format")
+ValueError: Unsupported results format
+2025-04-30 20:08:39,572 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:08:39] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 20:10:22,173 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\utils.py', reloading
+2025-04-30 20:10:23,127 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 20:10:30,481 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 20:10:30,494 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 20:10:30,508 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 20:10:40,022 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\Multiple-microaneurysms.png
+2025-04-30 20:10:40,042 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 20:10:43,965 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 20:10:45,286 - root - INFO - Raw results: {'label': 'nematode, nematode worm, roundworm', 'confidence': 0.03169548511505127}
+2025-04-30 20:10:45,336 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:10:45] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 20:15:57,802 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\models.py', reloading
+2025-04-30 20:15:58,686 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 20:16:11,070 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 20:16:11,104 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 20:16:11,127 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 20:17:52,132 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\models.py', reloading
+2025-04-30 20:17:52,709 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 20:17:58,149 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 20:17:58,157 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 20:17:58,168 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 20:18:11,555 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\xray.jpg
+2025-04-30 20:18:11,603 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 20:18:12,372 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\utils\_http.py", line 409, in hf_raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/microsoft/biovil-image-classification/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\transformers\utils\hub.py", line 424, in cached_files
+    hf_hub_download(
+    ~~~~~~~~~~~~~~~^
+        path_or_repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        local_files_only=local_files_only,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\file_download.py", line 961, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+        # Destination
+    ...<14 lines>...
+        force_download=force_download,
+    )
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\file_download.py", line 1068, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\file_download.py", line 1596, in _raise_on_head_call_error
+    raise head_call_error
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\file_download.py", line 1484, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+        url=url, proxies=proxies, timeout=etag_timeout, headers=headers, token=token
+    )
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\file_download.py", line 1401, in get_hf_file_metadata
+    r = _request_wrapper(
+        method="HEAD",
+    ...<5 lines>...
+        timeout=timeout,
+    )
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\file_download.py", line 285, in _request_wrapper
+    response = _request_wrapper(
+        method=method,
+    ...<2 lines>...
+        **params,
+    )
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\file_download.py", line 309, in _request_wrapper
+    hf_raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\utils\_http.py", line 459, in hf_raise_for_status
+    raise _format(RepositoryNotFoundError, message, response) from e
+huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-68125b57-19cd75be6c45ae484d5d1f9e;de700c51-3bd7-40c0-8425-e8a3bdd6f0e8)
+
+Repository Not Found for url: https://huggingface.co/microsoft/biovil-image-classification/resolve/main/config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+Invalid username or password.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 91, in analyze
+    model = get_model(model_type)
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\models.py", line 131, in get_model
+    return _MODEL_REGISTRY[model_type]()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\models.py", line 68, in __init__
+    self.model = AutoModelForImageClassification.from_pretrained("microsoft/biovil-image-classification")
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\transformers\models\auto\auto_factory.py", line 492, in from_pretrained
+    resolved_config_file = cached_file(
+        pretrained_model_name_or_path,
+    ...<4 lines>...
+        **hub_kwargs,
+    )
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\transformers\utils\hub.py", line 266, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\transformers\utils\hub.py", line 456, in cached_files
+    raise OSError(
+    ...<4 lines>...
+    ) from e
+OSError: microsoft/biovil-image-classification is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+2025-04-30 20:18:12,400 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:18:12] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 20:19:32,198 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\models.py', reloading
+2025-04-30 20:19:32,968 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 20:19:38,966 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 20:19:38,974 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 20:19:38,984 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 20:19:44,097 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\xray.jpg
+2025-04-30 20:19:44,107 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 20:19:44,836 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\utils\_http.py", line 409, in hf_raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/MITCriticalData/chexpert-mlp/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\transformers\utils\hub.py", line 424, in cached_files
+    hf_hub_download(
+    ~~~~~~~~~~~~~~~^
+        path_or_repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        local_files_only=local_files_only,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\file_download.py", line 961, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+        # Destination
+    ...<14 lines>...
+        force_download=force_download,
+    )
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\file_download.py", line 1068, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\file_download.py", line 1596, in _raise_on_head_call_error
+    raise head_call_error
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\file_download.py", line 1484, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+        url=url, proxies=proxies, timeout=etag_timeout, headers=headers, token=token
+    )
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\file_download.py", line 1401, in get_hf_file_metadata
+    r = _request_wrapper(
+        method="HEAD",
+    ...<5 lines>...
+        timeout=timeout,
+    )
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\file_download.py", line 285, in _request_wrapper
+    response = _request_wrapper(
+        method=method,
+    ...<2 lines>...
+        **params,
+    )
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\file_download.py", line 309, in _request_wrapper
+    hf_raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\utils\_http.py", line 459, in hf_raise_for_status
+    raise _format(RepositoryNotFoundError, message, response) from e
+huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-68125bb3-1114f7897d6f54921b37cd3a;fbef7d5e-50eb-442a-93f1-309e02a768c5)
+
+Repository Not Found for url: https://huggingface.co/MITCriticalData/chexpert-mlp/resolve/main/config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+Invalid username or password.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 91, in analyze
+    model = get_model(model_type)
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\models.py", line 131, in get_model
+    return _MODEL_REGISTRY[model_type]()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\models.py", line 68, in __init__
+    self.model = AutoModelForImageClassification.from_pretrained("MITCriticalData/chexpert-mlp")
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\transformers\models\auto\auto_factory.py", line 492, in from_pretrained
+    resolved_config_file = cached_file(
+        pretrained_model_name_or_path,
+    ...<4 lines>...
+        **hub_kwargs,
+    )
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\transformers\utils\hub.py", line 266, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\transformers\utils\hub.py", line 456, in cached_files
+    raise OSError(
+    ...<4 lines>...
+    ) from e
+OSError: MITCriticalData/chexpert-mlp is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+2025-04-30 20:19:44,843 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:19:44] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 20:21:37,558 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\models.py', reloading
+2025-04-30 20:21:38,100 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 20:21:42,523 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 20:21:42,529 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 20:21:42,537 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 20:21:49,776 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\xray.jpg
+2025-04-30 20:21:49,784 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 20:23:38,756 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 20:23:39,127 - root - INFO - Raw results: {'label': 'NORMAL', 'confidence': 0.5813919305801392}
+2025-04-30 20:23:39,157 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:23:39] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 20:25:56,894 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\models.py', reloading
+2025-04-30 20:25:57,571 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 20:26:04,994 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 20:26:05,007 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 20:26:05,013 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 20:26:23,826 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\consolidation-rml.jpg
+2025-04-30 20:26:23,919 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 20:26:28,531 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 20:26:28,908 - root - INFO - Raw results: {'label': 'NORMAL', 'confidence': 0.8047596216201782}
+2025-04-30 20:26:28,952 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:26:28] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 20:26:37,908 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\consolidation-rml.jpg
+2025-04-30 20:26:37,995 - models - INFO - Initialized detection model: medical-detection-model
+2025-04-30 20:26:38,800 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 91, in analyze
+    model = get_model(model_type)
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\models.py", line 131, in get_model
+    return _MODEL_REGISTRY[model_type]()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\models.py", line 28, in __init__
+    self.model = AutoModelForObjectDetection.from_pretrained("nickmuchi/vit-finetuned-chest-xray-pneumonia")
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\transformers\models\auto\auto_factory.py", line 574, in from_pretrained
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Unrecognized configuration class <class 'transformers.models.vit.configuration_vit.ViTConfig'> for this kind of AutoModel: AutoModelForObjectDetection.
+Model type should be one of ConditionalDetrConfig, DabDetrConfig, DeformableDetrConfig, DetaConfig, DetrConfig, RTDetrConfig, RTDetrV2Config, TableTransformerConfig, YolosConfig.
+2025-04-30 20:26:38,807 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:26:38] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 20:27:46,035 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\models.py', reloading
+2025-04-30 20:27:46,699 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 20:27:51,657 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 20:27:51,664 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 20:27:51,674 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 20:28:02,608 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\consolidation-rml.jpg
+2025-04-30 20:28:02,707 - models - INFO - Initialized detection model: medical-detection-model
+2025-04-30 20:28:03,442 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 91, in analyze
+    model = get_model(model_type)
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\models.py", line 131, in get_model
+    return _MODEL_REGISTRY[model_type]()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\models.py", line 28, in __init__
+    self.model = AutoModelForObjectDetection.from_pretrained("Heem2/bone-fracture-detection-using-xray")
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\transformers\models\auto\auto_factory.py", line 574, in from_pretrained
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Unrecognized configuration class <class 'transformers.models.vit.configuration_vit.ViTConfig'> for this kind of AutoModel: AutoModelForObjectDetection.
+Model type should be one of ConditionalDetrConfig, DabDetrConfig, DeformableDetrConfig, DetaConfig, DetrConfig, RTDetrConfig, RTDetrV2Config, TableTransformerConfig, YolosConfig.
+2025-04-30 20:28:03,447 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:28:03] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 20:28:27,556 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\consolidation-rml.jpg
+2025-04-30 20:28:27,599 - models - INFO - Initialized detection model: medical-detection-model
+2025-04-30 20:28:27,988 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 91, in analyze
+    model = get_model(model_type)
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\models.py", line 131, in get_model
+    return _MODEL_REGISTRY[model_type]()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\models.py", line 28, in __init__
+    self.model = AutoModelForObjectDetection.from_pretrained("Heem2/bone-fracture-detection-using-xray")
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\transformers\models\auto\auto_factory.py", line 574, in from_pretrained
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Unrecognized configuration class <class 'transformers.models.vit.configuration_vit.ViTConfig'> for this kind of AutoModel: AutoModelForObjectDetection.
+Model type should be one of ConditionalDetrConfig, DabDetrConfig, DeformableDetrConfig, DetaConfig, DetrConfig, RTDetrConfig, RTDetrV2Config, TableTransformerConfig, YolosConfig.
+2025-04-30 20:28:27,990 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:28:27] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-04-30 20:30:41,216 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\models.py', reloading
+2025-04-30 20:30:41,745 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 20:30:46,190 - __main__ - INFO - Starting Medical Image Analysis API
+2025-04-30 20:30:46,198 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 20:30:46,204 - werkzeug - INFO -  * Debugger PIN: 331-659-793
+2025-04-30 20:30:54,921 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\consolidation-rml.jpg
+2025-04-30 20:30:55,016 - models - INFO - Initialized detection model: medical-detection-model
+2025-04-30 20:31:01,463 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-04-30 20:31:01,677 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-04-30 20:31:01,812 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-04-30 20:31:04,544 - models - INFO - Running detection on image of size (512, 512)
+2025-04-30 20:31:06,140 - root - INFO - Raw results: [{'scores': tensor([], grad_fn=<IndexBackward0>), 'labels': tensor([], dtype=torch.int64), 'boxes': tensor([], size=(0, 4), grad_fn=<IndexBackward0>)}]
+2025-04-30 20:31:06,183 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:31:06] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 20:31:27,472 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\consolidation-rml.jpg
+2025-04-30 20:31:27,540 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 20:31:31,273 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 20:31:31,624 - root - INFO - Raw results: {'label': 'NORMAL', 'confidence': 0.8047596216201782}
+2025-04-30 20:31:31,669 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:31:31] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 20:34:36,064 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\consolidation-rml.jpg
+2025-04-30 20:34:36,125 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 20:34:39,553 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 20:34:39,927 - root - INFO - Raw results: {'label': 'NORMAL', 'confidence': 0.8047596216201782}
+2025-04-30 20:34:39,991 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:34:39] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 20:34:46,930 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-04-30 20:34:46,946 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 20:34:51,833 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 20:34:52,154 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-04-30 20:34:52,189 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:34:52] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 20:43:37,147 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:43:37] "GET / HTTP/1.1" 200 -
+2025-04-30 20:44:56,980 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:44:56] "[33mGET /api/classify HTTP/1.1[0m" 404 -
+2025-04-30 20:44:57,005 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:44:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-30 20:45:06,228 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:45:06] "[31m[1mGET /api/analyze HTTP/1.1[0m" 405 -
+2025-04-30 20:47:27,100 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:47:27] "OPTIONS /api/analyze HTTP/1.1" 200 -
+2025-04-30 20:47:27,388 - __main__ - ERROR - No image part in the request
+2025-04-30 20:47:27,389 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:47:27] "[31m[1mPOST /api/analyze HTTP/1.1[0m" 400 -
+2025-04-30 20:50:38,296 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-04-30 20:50:38,340 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 20:50:43,244 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 20:50:43,846 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-04-30 20:50:43,952 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:50:43] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 20:55:03,534 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-04-30 20:55:03,549 - models - INFO - Initialized detection model: medical-detection-model
+2025-04-30 20:55:04,376 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-04-30 20:55:04,607 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-04-30 20:55:04,640 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-04-30 20:55:07,129 - models - INFO - Running detection on image of size (512, 512)
+2025-04-30 20:55:08,705 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-04-30 20:55:08,735 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:55:08] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 20:58:10,157 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-04-30 20:58:10,178 - models - INFO - Initialized detection model: medical-detection-model
+2025-04-30 20:58:10,732 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-04-30 20:58:10,958 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-04-30 20:58:11,025 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-04-30 20:58:14,089 - models - INFO - Running detection on image of size (512, 512)
+2025-04-30 20:58:15,532 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-04-30 20:58:15,576 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 20:58:15] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 22:22:55,620 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-04-30 22:22:55,736 - models - INFO - Initialized detection model: medical-detection-model
+2025-04-30 22:22:57,030 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-04-30 22:22:57,262 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-04-30 22:22:57,358 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-04-30 22:23:00,296 - models - INFO - Running detection on image of size (512, 512)
+2025-04-30 22:23:03,283 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-04-30 22:23:03,386 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 22:23:03] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 23:19:23,752 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-04-30 23:19:23,840 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 23:19:29,282 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 23:19:30,858 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-04-30 23:19:31,017 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 23:19:31] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 23:19:47,367 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-04-30 23:19:47,409 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 23:19:51,451 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 23:19:52,712 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-04-30 23:19:52,867 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 23:19:52] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 23:33:49,525 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\akh.jpg
+2025-04-30 23:33:49,612 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 23:34:00,184 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 23:34:02,607 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9743534326553345}
+2025-04-30 23:34:02,755 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 23:34:02] "POST /api/analyze HTTP/1.1" 200 -
+2025-04-30 23:36:17,627 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\ak2h.jpg
+2025-04-30 23:36:17,659 - models - INFO - Initialized classification model: medical-classification-model
+2025-04-30 23:36:23,534 - models - INFO - Running classification on image of size (299, 299)
+2025-04-30 23:36:24,878 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9791989922523499}
+2025-04-30 23:36:25,021 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 23:36:25] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-01 11:59:54,784 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\consolidation-rml.jpg
+2025-05-01 11:59:54,868 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-01 11:59:57,901 - models - INFO - Running classification on image of size (299, 299)
+2025-05-01 11:59:58,315 - root - INFO - Raw results: {'label': 'NORMAL', 'confidence': 0.8047596216201782}
+2025-05-01 11:59:58,359 - werkzeug - INFO - 127.0.0.1 - - [01/May/2025 11:59:58] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-01 12:00:11,492 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-01 12:00:11,506 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-01 12:00:14,888 - models - INFO - Running classification on image of size (299, 299)
+2025-05-01 12:00:15,827 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-01 12:00:15,867 - werkzeug - INFO - 127.0.0.1 - - [01/May/2025 12:00:15] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 11:50:28,887 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 11:50:28,916 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.60.225:5000
+2025-05-05 11:50:28,916 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-05 11:50:28,921 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 11:50:33,802 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 11:50:33,808 - werkzeug - WARNING -  * Debugger is active!
+2025-05-05 11:50:33,818 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-05 11:50:47,831 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:50:47] "GET / HTTP/1.1" 200 -
+2025-05-05 11:50:47,853 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:50:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-05 11:55:12,316 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-05-05 11:55:12,906 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 11:55:17,276 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 11:55:17,282 - werkzeug - WARNING -  * Debugger is active!
+2025-05-05 11:55:17,289 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-05 11:56:17,575 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:56:17] "GET / HTTP/1.1" 200 -
+2025-05-05 11:56:32,779 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:56:32] "[31m[1mGET /api/analyze HTTP/1.1[0m" 405 -
+2025-05-05 11:58:02,260 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:58:02] "GET / HTTP/1.1" 200 -
+2025-05-05 11:58:37,029 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 11:58:37,069 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 11:58:40,848 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 11:58:41,222 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-05 11:58:41,222 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-05 11:58:41,254 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:58:41] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 12:10:34,386 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 12:10:34,395 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-05 12:10:34,819 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-05 12:10:35,015 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-05 12:10:35,121 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-05 12:10:37,504 - models - INFO - Running detection on image of size (512, 512)
+2025-05-05 12:10:39,397 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-05 12:10:39,398 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-05 12:10:39,455 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 12:10:39] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 12:17:39,863 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 12:17:39,877 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-05 12:17:40,586 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-05 12:17:40,788 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-05 12:17:40,824 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-05 12:17:43,427 - models - INFO - Running detection on image of size (512, 512)
+2025-05-05 12:17:44,337 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-05 12:17:44,337 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-05 12:17:44,358 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 12:17:44] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 12:19:42,261 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 12:19:42,269 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-05 12:19:42,675 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-05 12:19:42,881 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-05 12:19:42,908 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-05 12:19:44,933 - models - INFO - Running detection on image of size (512, 512)
+2025-05-05 12:19:45,836 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-05 12:19:45,836 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-05 12:19:45,855 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 12:19:45] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 12:22:12,946 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-05-05 12:22:14,001 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 12:22:49,362 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 12:22:49,395 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.60.225:5000
+2025-05-05 12:22:49,396 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-05 12:22:49,398 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 12:22:53,821 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 12:22:53,827 - werkzeug - WARNING -  * Debugger is active!
+2025-05-05 12:22:53,834 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-05 12:23:04,155 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 12:23:04,190 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-05 12:23:05,096 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-05 12:23:05,304 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-05 12:23:05,369 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-05 12:23:07,612 - models - INFO - Running detection on image of size (512, 512)
+2025-05-05 12:23:08,533 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-05 12:23:08,533 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-05 12:23:08,553 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 12:23:08] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 12:25:49,575 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 12:25:49,590 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.60.225:5000
+2025-05-05 12:25:49,591 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-05 12:25:49,593 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 12:25:54,619 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 12:25:54,629 - werkzeug - WARNING -  * Debugger is active!
+2025-05-05 12:25:54,640 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-05 12:26:00,819 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 12:26:00,836 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-05 12:26:01,509 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-05 12:26:01,719 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-05 12:26:01,774 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-05 12:26:03,877 - models - INFO - Running detection on image of size (512, 512)
+2025-05-05 12:26:04,919 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-05 12:26:04,920 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-05 12:26:04,947 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 12:26:04] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 12:26:53,785 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-05-05 12:26:54,385 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 12:26:58,774 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 12:26:58,780 - werkzeug - WARNING -  * Debugger is active!
+2025-05-05 12:26:58,789 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-05 12:27:07,903 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 12:27:07,919 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-05 12:27:08,691 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-05 12:27:08,937 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-05 12:27:08,984 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-05 12:27:11,023 - models - INFO - Running detection on image of size (512, 512)
+2025-05-05 12:27:12,006 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-05 12:27:12,007 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-05 12:27:12,009 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 108, in analyze
+    logger.info(f"JSS: {json.dumps(jss, indent=2)}")
+                        ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Response is not JSON serializable
+2025-05-05 12:27:12,028 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 12:27:12] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-05-05 12:28:18,053 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-05-05 12:28:18,708 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 12:28:23,366 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 12:28:23,373 - werkzeug - WARNING -  * Debugger is active!
+2025-05-05 12:28:23,379 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-05 12:33:13,648 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 12:33:13,666 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-05 12:33:14,575 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-05 12:33:14,765 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-05 12:33:14,824 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-05 12:33:17,014 - models - INFO - Running detection on image of size (512, 512)
+2025-05-05 12:33:18,036 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-05 12:33:18,037 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-05 12:33:18,070 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 12:33:18] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 12:40:39,267 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 12:40:39,281 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-05 12:40:40,763 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-05 12:40:41,123 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-05 12:40:41,135 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-05 12:41:06,795 - models - INFO - Running detection on image of size (512, 512)
+2025-05-05 12:41:07,678 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-05 12:41:07,679 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-05 12:41:07,706 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 12:41:07] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 12:42:10,845 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 12:42:10,856 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 12:42:13,928 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 12:42:14,226 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-05 12:42:14,227 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-05 12:42:14,265 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 12:42:14] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 12:59:56,880 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 12:59:56,894 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-05 12:59:57,274 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-05 12:59:57,464 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-05 12:59:57,495 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-05 12:59:59,588 - models - INFO - Running detection on image of size (512, 512)
+2025-05-05 13:00:00,468 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-05 13:00:00,469 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-05 13:00:00,486 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 13:00:00] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 13:09:49,177 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\models.py', reloading
+2025-05-05 13:09:50,164 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 13:09:58,237 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 13:09:58,254 - werkzeug - WARNING -  * Debugger is active!
+2025-05-05 13:09:58,261 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-05 13:12:08,575 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-05-05 13:12:09,083 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 13:12:13,931 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 13:12:13,940 - werkzeug - WARNING -  * Debugger is active!
+2025-05-05 13:12:13,946 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-05 13:13:07,863 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-05-05 13:13:08,423 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 13:13:13,236 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 13:13:13,242 - werkzeug - WARNING -  * Debugger is active!
+2025-05-05 13:13:13,250 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-05 13:13:53,315 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 13:13:53,348 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 13:13:57,279 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 13:13:57,623 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 13:13:57] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 13:16:37,630 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 13:16:37,641 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 13:16:40,549 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 13:16:40,858 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 13:16:40] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 13:20:26,043 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 13:20:26,051 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 13:20:28,604 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 13:20:28,941 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 13:20:28] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 13:23:04,527 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 13:23:04,534 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 13:23:07,114 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 13:23:07,456 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 13:23:07] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 13:24:49,438 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 13:24:49,447 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 13:24:52,249 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 13:24:52,588 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 13:24:52] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 13:32:27,039 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-05-05 13:32:27,619 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 13:32:32,551 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 13:32:32,559 - werkzeug - WARNING -  * Debugger is active!
+2025-05-05 13:32:32,565 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-05 13:32:43,192 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 13:32:43,214 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 13:32:46,117 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 13:32:46,422 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-05 13:32:46,423 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-05 13:32:46,469 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 13:32:46] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 13:36:06,817 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 13:36:06,826 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 13:36:09,342 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 13:36:09,642 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-05 13:36:09,643 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-05 13:36:09,686 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 13:36:09] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 14:58:38,236 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 14:58:38,244 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 14:58:40,851 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 14:58:41,142 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-05 14:58:41,142 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-05 14:58:41,174 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 14:58:41] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 14:59:51,006 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-05-05 14:59:51,976 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 15:00:05,148 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 15:00:05,174 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.60.225:5000
+2025-05-05 15:00:05,174 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-05 15:00:05,177 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 15:00:09,775 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 15:00:09,783 - werkzeug - WARNING -  * Debugger is active!
+2025-05-05 15:00:09,790 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-05 15:00:20,233 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 15:00:20,257 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 15:00:25,117 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 15:00:25,437 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-05 15:00:25,437 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-05 15:00:25,483 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 15:00:25] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 15:03:05,495 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 15:03:05,504 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 15:03:08,172 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 15:03:08,490 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-05 15:03:08,490 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-05 15:03:08,535 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 15:03:08] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 15:05:44,713 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 15:05:44,722 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 15:05:47,376 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 15:05:47,684 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-05 15:05:47,684 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-05 15:05:47,732 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 15:05:47] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 15:06:27,108 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 15:06:27,121 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 15:06:29,715 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 15:06:30,027 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-05 15:06:30,027 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-05 15:06:30,066 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 15:06:30] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 15:07:07,362 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 15:07:07,373 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 15:07:09,903 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 15:07:10,183 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-05 15:07:10,183 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-05 15:07:10,217 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 15:07:10] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 15:09:01,855 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-05 15:09:01,863 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-05 15:09:05,585 - models - INFO - Running classification on image of size (299, 299)
+2025-05-05 15:09:05,891 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-05 15:09:05,892 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-05 15:09:05,938 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 15:09:05] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-05 16:42:27,140 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 16:42:27,190 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.8.178:5000
+2025-05-05 16:42:27,190 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-05 16:42:27,195 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 16:42:45,594 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-05 16:42:45,648 - werkzeug - WARNING -  * Debugger is active!
+2025-05-05 16:42:45,694 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-07 12:59:06,639 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 12:59:07,058 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-07 12:59:15,936 - models - INFO - Running classification on image of size (299, 299)
+2025-05-07 12:59:17,549 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-07 12:59:17,550 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-07 12:59:17,702 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 12:59:17] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-07 13:20:47,238 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\xray.jpg
+2025-05-07 13:20:47,244 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-07 13:20:50,380 - models - INFO - Running classification on image of size (299, 299)
+2025-05-07 13:20:50,907 - root - INFO - Raw results: {'label': 'NORMAL', 'confidence': 0.5813919305801392}
+2025-05-07 13:20:50,908 - __main__ - INFO - Results: [
+  {
+    "label": "NORMAL",
+    "confidence": 0.5813919305801392
+  }
+]
+2025-05-07 13:20:50,996 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 13:20:50] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-07 13:21:10,282 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\consolidation-rml.jpg
+2025-05-07 13:21:10,396 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-07 13:21:12,976 - models - INFO - Running classification on image of size (299, 299)
+2025-05-07 13:21:13,494 - root - INFO - Raw results: {'label': 'NORMAL', 'confidence': 0.8047596216201782}
+2025-05-07 13:21:13,494 - __main__ - INFO - Results: [
+  {
+    "label": "NORMAL",
+    "confidence": 0.8047596216201782
+  }
+]
+2025-05-07 13:21:13,585 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 13:21:13] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-07 13:21:30,519 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 13:21:30,534 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-07 13:21:33,322 - models - INFO - Running classification on image of size (299, 299)
+2025-05-07 13:21:33,842 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-07 13:21:33,842 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-07 13:21:33,935 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 13:21:33] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-07 13:35:29,325 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 13:35:29,347 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-07 13:35:32,394 - models - INFO - Running classification on image of size (299, 299)
+2025-05-07 13:35:32,944 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-07 13:35:32,945 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-07 13:35:33,042 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 13:35:33] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-07 13:44:24,858 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 13:44:24,882 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-07 13:44:28,424 - models - INFO - Running classification on image of size (299, 299)
+2025-05-07 13:44:29,066 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-07 13:44:29,067 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-07 13:44:29,167 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 13:44:29] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-07 13:44:44,129 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 13:44:44,153 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-07 13:44:46,570 - models - INFO - Running classification on image of size (299, 299)
+2025-05-07 13:44:47,055 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-07 13:44:47,056 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-07 13:44:47,138 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 13:44:47] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-07 15:02:51,989 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\xray.jpg
+2025-05-07 15:02:52,003 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-07 15:02:55,645 - models - INFO - Running classification on image of size (299, 299)
+2025-05-07 15:02:56,215 - root - INFO - Raw results: {'label': 'NORMAL', 'confidence': 0.5813919305801392}
+2025-05-07 15:02:56,215 - __main__ - INFO - Results: [
+  {
+    "label": "NORMAL",
+    "confidence": 0.5813919305801392
+  }
+]
+2025-05-07 15:02:56,323 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 15:02:56] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-07 15:18:39,883 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 15:18:39,903 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-07 15:18:43,097 - models - INFO - Running classification on image of size (299, 299)
+2025-05-07 15:18:43,650 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-07 15:18:43,650 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-07 15:18:43,757 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 15:18:43] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-07 15:30:29,554 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\models.py', reloading
+2025-05-07 15:30:31,757 - werkzeug - INFO -  * Restarting with stat
+2025-05-07 15:30:43,586 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-07 15:30:43,619 - werkzeug - WARNING -  * Debugger is active!
+2025-05-07 15:30:43,642 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-07 15:32:25,314 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 15:32:25,377 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-07 15:32:30,386 - models - INFO - Running classification on image of size (299, 299)
+2025-05-07 15:32:30,970 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-07 15:32:30,971 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-07 15:32:31,059 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 15:32:31] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-07 16:42:17,329 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 16:42:17,368 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-07 16:42:20,862 - models - INFO - Running classification on image of size (299, 299)
+2025-05-07 16:42:21,454 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-07 16:42:21,455 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-07 16:42:21,587 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 16:42:21] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-07 16:44:28,642 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 16:44:28,662 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-07 16:44:32,056 - models - INFO - Running classification on image of size (299, 299)
+2025-05-07 16:44:32,465 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-07 16:44:32,466 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-07 16:44:32,542 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 16:44:32] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-07 17:09:33,300 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 17:09:33,340 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-07 17:09:36,858 - models - INFO - Running classification on image of size (299, 299)
+2025-05-07 17:09:37,889 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-07 17:09:37,890 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-07 17:09:38,030 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 17:09:38] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-07 17:10:05,302 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\Multiple-microaneurysms.png
+2025-05-07 17:10:05,324 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-07 17:10:08,758 - models - INFO - Running classification on image of size (299, 299)
+2025-05-07 17:10:09,444 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.8578866720199585}
+2025-05-07 17:10:09,445 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.8578866720199585
+  }
+]
+2025-05-07 17:10:09,555 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 17:10:09] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-07 17:17:58,897 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 17:17:58,924 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-07 17:18:00,426 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-07 17:18:00,652 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-07 17:18:00,847 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-07 17:18:04,482 - models - INFO - Running detection on image of size (512, 512)
+2025-05-07 17:18:07,650 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-07 17:18:07,651 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-07 17:18:07,656 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 104, in analyze
+    return jsonify({
+        "success": True,
+    ...<2 lines>...
+        "processing_time": f"{processing_time:.2f}s"
+    })
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 215, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 180, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 120, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type Tensor is not JSON serializable
+2025-05-07 17:18:07,762 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 17:18:07] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-05-07 17:18:19,850 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 17:18:19,872 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-07 17:18:20,344 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-07 17:18:20,577 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-07 17:18:20,638 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-07 17:18:23,455 - models - INFO - Running detection on image of size (512, 512)
+2025-05-07 17:18:25,733 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-07 17:18:25,734 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-07 17:18:25,735 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 104, in analyze
+    return jsonify({
+        "success": True,
+    ...<2 lines>...
+        "processing_time": f"{processing_time:.2f}s"
+    })
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 215, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 180, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 120, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type Tensor is not JSON serializable
+2025-05-07 17:18:25,807 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 17:18:25] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-05-07 17:25:16,715 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-05-07 17:25:19,189 - werkzeug - INFO -  * Restarting with stat
+2025-05-07 17:25:38,892 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-07 17:25:38,935 - werkzeug - WARNING -  * Debugger is active!
+2025-05-07 17:25:38,971 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-07 17:25:42,611 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 17:25:42,658 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-07 17:25:43,959 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-07 17:25:44,185 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-07 17:25:44,307 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-07 17:25:47,367 - models - INFO - Running detection on image of size (512, 512)
+2025-05-07 17:25:49,805 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-07 17:25:49,806 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-07 17:25:49,808 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 104, in analyze
+    return jsonify({
+        "success": True,
+    ...<2 lines>...
+        "processing_time": f"{processing_time:.2f}s"
+    })
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 215, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 180, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 120, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type Tensor is not JSON serializable
+2025-05-07 17:25:49,872 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 17:25:49] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-05-07 17:26:52,888 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 17:26:52,911 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-07 17:26:53,624 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-07 17:26:53,846 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-07 17:26:53,878 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-07 17:26:57,131 - models - INFO - Running detection on image of size (512, 512)
+2025-05-07 17:26:59,198 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-07 17:26:59,199 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-07 17:26:59,200 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 104, in analyze
+    return jsonify({
+        "success": True,
+    ...<2 lines>...
+        "processing_time": f"{processing_time:.2f}s"
+    })
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 215, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 180, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 120, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type Tensor is not JSON serializable
+2025-05-07 17:26:59,275 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 17:26:59] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-05-07 17:28:13,557 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-05-07 17:28:14,200 - werkzeug - INFO -  * Restarting with stat
+2025-05-07 17:28:21,228 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-07 17:28:21,240 - werkzeug - WARNING -  * Debugger is active!
+2025-05-07 17:28:21,253 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-07 17:28:24,155 - __main__ - INFO - medical-detection
+2025-05-07 17:28:24,156 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 17:28:24,179 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-07 17:28:25,324 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-07 17:28:25,542 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-07 17:28:25,652 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-07 17:28:28,269 - models - INFO - Running detection on image of size (512, 512)
+2025-05-07 17:28:30,238 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-07 17:28:30,239 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-07 17:28:30,240 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 104, in analyze
+    return jsonify({
+        "success": True,
+    ...<2 lines>...
+        "processing_time": f"{processing_time:.2f}s"
+    })
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 215, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 180, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 120, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type Tensor is not JSON serializable
+2025-05-07 17:28:30,291 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 17:28:30] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-05-07 17:28:49,702 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-05-07 17:28:50,468 - werkzeug - INFO -  * Restarting with stat
+2025-05-07 17:28:56,538 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-07 17:28:56,549 - werkzeug - WARNING -  * Debugger is active!
+2025-05-07 17:28:56,558 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-07 17:28:59,632 - __main__ - INFO - medical-detection
+2025-05-07 17:28:59,634 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 17:28:59,660 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-07 17:29:00,951 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-07 17:29:01,178 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-07 17:29:01,247 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-07 17:29:03,824 - models - INFO - Running detection on image of size (512, 512)
+2025-05-07 17:29:05,129 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-07 17:29:05,129 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-07 17:29:05,131 - __main__ - ERROR - Error processing image
+Traceback (most recent call last):
+  File "C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\app.py", line 104, in analyze
+    return jsonify({
+        "success": True,
+    ...<2 lines>...
+        "processing_time": f"{processing_time:.2f}s"
+    })
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 215, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 180, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\a.muzammil\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\json\provider.py", line 120, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type Tensor is not JSON serializable
+2025-05-07 17:29:05,183 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 17:29:05] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-05-07 17:29:20,326 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-05-07 17:29:20,997 - werkzeug - INFO -  * Restarting with stat
+2025-05-07 17:29:28,031 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-07 17:29:28,041 - werkzeug - WARNING -  * Debugger is active!
+2025-05-07 17:29:28,051 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-07 17:35:04,169 - werkzeug - INFO -  * Detected change in 'C:\\MTech\\MTECH-Public\\SEM3\\ACNS\\Assignment2\\MedAPI\\api\\app.py', reloading
+2025-05-07 17:35:04,781 - werkzeug - INFO -  * Restarting with stat
+2025-05-07 17:35:13,238 - __main__ - INFO - Starting Medical Image Analysis API
+2025-05-07 17:35:13,253 - werkzeug - WARNING -  * Debugger is active!
+2025-05-07 17:35:13,274 - werkzeug - INFO -  * Debugger PIN: 384-226-000
+2025-05-07 17:35:18,282 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 17:35:18,307 - models - INFO - Initialized detection model: medical-detection-model
+2025-05-07 17:35:19,229 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2025-05-07 17:35:19,462 - timm.models._hub - INFO - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-07 17:35:19,537 - timm.models._builder - INFO - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2025-05-07 17:35:22,412 - models - INFO - Running detection on image of size (512, 512)
+2025-05-07 17:35:24,204 - root - INFO - Raw results: [{'scores': tensor([0.6972, 0.9908], grad_fn=<IndexBackward0>), 'labels': tensor([1, 1]), 'boxes': tensor([[ 2.4303e+01, -1.0715e-01,  4.8622e+02,  5.1177e+02],
+        [ 3.2434e+00,  9.6420e-02,  5.1076e+02,  5.1197e+02]],
+       grad_fn=<IndexBackward0>)}]
+2025-05-07 17:35:24,205 - __main__ - INFO - Results: [
+  {
+    "label": [
+      1,
+      1
+    ],
+    "confidence": [
+      0.6971990466117859,
+      0.9907729625701904
+    ],
+    "bbox": [
+      [
+        24.303237915039062,
+        -0.107147216796875,
+        486.22003173828125,
+        511.77459716796875
+      ],
+      [
+        3.243438720703125,
+        0.0964202880859375,
+        510.7561950683594,
+        511.97210693359375
+      ]
+    ]
+  }
+]
+2025-05-07 17:35:24,272 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 17:35:24] "POST /api/analyze HTTP/1.1" 200 -
+2025-05-07 17:35:41,437 - __main__ - INFO - Saved file to C:\MTech\MTECH-Public\SEM3\ACNS\Assignment2\MedAPI\api\uploads\person100_bacteria_475.jpeg
+2025-05-07 17:35:41,449 - models - INFO - Initialized classification model: medical-classification-model
+2025-05-07 17:35:46,579 - models - INFO - Running classification on image of size (299, 299)
+2025-05-07 17:35:47,047 - root - INFO - Raw results: {'label': 'PNEUMONIA', 'confidence': 0.9697712063789368}
+2025-05-07 17:35:47,048 - __main__ - INFO - Results: [
+  {
+    "label": "PNEUMONIA",
+    "confidence": 0.9697712063789368
+  }
+]
+2025-05-07 17:35:47,118 - werkzeug - INFO - 127.0.0.1 - - [07/May/2025 17:35:47] "POST /api/analyze HTTP/1.1" 200 -

@@ -1,0 +1,8 @@
+flask
+flask-cors
+pillow
+numpy
+# Uncomment the following lines to use actual Huggingface models
+transformers
+torch
+torchvision

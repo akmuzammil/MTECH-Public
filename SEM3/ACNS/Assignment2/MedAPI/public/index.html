@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Image Analysis API</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Medical Image Analysis API</h1>
+      <p>A bridge between your web application and AI models for medical image analysis</p>
+    </header>
+    
+    <section class="api-test">
+      <h2>Test the API</h2>
+      <div class="upload-container">
+        <form id="upload-form" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="image-upload">Select Medical Image</label>
+            <input type="file" id="image-upload" name="image" accept="image/*" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="model-select">Select Model</label>
+            <select id="model-select" name="model">
+              <option value="medical-detection">Medical Detection</option>
+              <option value="medical-classification">Medical Classification</option>
+            </select>
+          </div>
+          
+          <button type="submit" id="analyze-button">Analyze Image</button>
+        </form>
+      </div>
+      
+      <div class="results-container">
+        <h3>Results</h3>
+        <div id="loading" class="hidden">
+          <div class="spinner"></div>
+          <p>Processing image...</p>
+        </div>
+        <div id="results-display">
+          <div class="image-preview">
+            <h4>Image Preview</h4>
+            <img id="preview-image" src="" alt="Preview will appear here">
+          </div>
+          <div class="analysis-results">
+            <h4>Analysis</h4>
+            <pre id="results-json"></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="api-docs">
+      <h2>API Documentation</h2>
+      <div class="endpoint">
+        <h3>POST /api/analyze</h3>
+        <p>Analyze a medical image using AI models</p>
+        <h4>Request</h4>
+        <ul>
+          <li><strong>Content-Type:</strong> multipart/form-data</li>
+          <li><strong>image:</strong> The image file to analyze</li>
+          <li><strong>model:</strong> The model to use (medical-detection or medical-classification)</li>
+        </ul>
+        <h4>Response</h4>
+        <pre>{
+  "success": true,
+  "model": "medical-detection",
+  "results": [
+    {
+      "label": "Pneumonia",
+      "confidence": 0.92,
+      "bbox": [x, y, width, height] // For detection models
+    },
+    ...
+  ],
+  "processing_time": "1.2s"
+}</pre>
+      </div>
+    </section>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
